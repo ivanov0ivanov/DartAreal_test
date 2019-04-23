@@ -1,0 +1,13 @@
+{
+  "name": "AUTH-test",
+  "version": "1.0.0",
+  "description": "test task - authorization",
+  "main": "main.js",
+  "repository": "https://github.com/ivanov0ivanov/DartAreal_test.git",
+  "author": "Yevhenii Ivanov",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
