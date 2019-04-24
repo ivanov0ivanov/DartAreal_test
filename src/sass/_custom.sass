@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta')
+
+body
+  font-family: 'Mukta', sans-serif
+  height: 100vh
+  min-height: 550px
+  overflow-y: hidden
+
+.bg-panel
+  color: #ffffff
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  transform: translateY(-50%)
+  text-align: center
+  width: 70%
+  margin: 0 auto
+  height: 400px
+  background: #2CADB4
+
+  .container_info
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+    .registration_info
+      text-align: left
+
+    .login_info
+      text-align: right
+
+    input[type="radio"]
+      position: relative
+      display: none
+
+  .container_form-block
+    background-color: rgba(255, 255, 255, 1)
+    height: 500px
+    position: absolute
+    top: -50px
+    width: 50%
+    right: calc(50% - 30px)
+    transition: .3s ease-in-out
+    box-shadow: 0 0 6px 1px #CCCDCE
+
+  .registration_active,
+  .login_active
+    padding: 50px
+    z-index: 1
+    display: none
+    transition: 0.3s ease-in-out
+    color: #242424
+    text-align: left
+  //opacity: 0
+
+  input
+    width: 100%
+    display: block
+    margin: 20px 0
+    padding: 15px
+    border: 1px solid #b5b5b5
+    outline: none
+
+.btn_auth
+  cursor: pointer
+  width: 150px
+  font-size: 18px
+
+
+//for scripts
+
+.show_panel
+  //opacity: 0.9 !important
+  display: block !important
+
+.switch_block
+  right: 30px !important

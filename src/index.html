@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.bundle.css">
+    <title>auth</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron p-5 bg-panel">
+        <div class="container_info">
+            <div class="row">
+                <div class="col-6">
+                    <div class="registration_info">
+                        <h2>Have no account yet?</h2>
+                        <label class="btn btn-outline-light btn_auth" id="label-login" for="sign-up">Sign
+                            Up</label>
+                        <input type="radio" name="active-log-panel" id="sign-up" checked="checked">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="login_info">
+                        <h2>Already registered?</h2>
+                        <label class="btn btn-outline-light btn_auth" id="label-register" for="log-in">Log
+                            In</label>
+                        <input type="radio" name="active-log-panel" id="log-in">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_form-block">
+            <div class="registration_active">
+                <form action="#">
+                    <div class="form-group">
+                        <h2 class="text-uppercase">Create your account</h2>
+                        <input type="text" placeholder="Full name">
+                        <input type="text" placeholder="Login">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-dark text-uppercase float-right btn_auth">Register</button>
+                </form>
+            </div>
+            <div class="login_active">
+                <form action="#">
+                    <div class="form-group">
+                        <h2 class="text-uppercase">Log in</h2>
+                        <input type="text" placeholder="Login">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-dark text-uppercase float-right btn_auth">LogIn</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
