@@ -11,6 +11,10 @@
 </head>
 <body>
 <div class="container">
+    <div class="success_container p-4">
+        <h2 class="success text-success">Successful!</h2>
+        <h2 class="success-welcome text-warning">Welcome!</h2>
+    </div>
     <div class="jumbotron p-5 bg-panel">
         <div class="container_info">
             <div class="row">
@@ -37,21 +41,29 @@
                 <form action="#">
                     <div class="form-group">
                         <h2 class="text-uppercase">Create your account</h2>
-                        <input type="text" placeholder="Full name">
-                        <input type="text" placeholder="Login">
-                        <input type="password" placeholder="Password">
+                        <input class="fullName" type="text" placeholder="Full name">
+                        <input class="login" type="text" placeholder="Login">
+                        <input class="password" type="password" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-dark text-uppercase float-right btn_auth">Register</button>
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h2 class="error text-danger">Please fill in all the fields!</h2>
+                        <button type="submit" id="signUp" class="btn btn-dark text-uppercase btn_auth">Register</button>
+                    </div>
                 </form>
             </div>
             <div class="login_active">
                 <form action="#">
                     <div class="form-group">
                         <h2 class="text-uppercase">Log in</h2>
-                        <input type="text" placeholder="Login">
-                        <input type="password" placeholder="Password">
+                        <input class="loginIn" type="text" placeholder="Login">
+                        <input class="passwordPass" type="password" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-dark text-uppercase float-right btn_auth">LogIn</button>
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h2 class="error text-danger">Please enter correct login or password</h2>
+                        <h2 class="errorUser text-danger">This user doesn't exist.</h2>
+                        <button type="submit" id="logIn" class="btn btn-dark text-uppercase btn_auth">LogIn
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

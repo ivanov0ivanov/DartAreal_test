@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require ('clean-webpack-plugin');
 module.exports = {
     entry: [
         './src/js/bundle.js',
+        './src/js/auth.js',
         './src/sass/style.sass'
     ],
     output: {
@@ -79,6 +80,8 @@ module.exports = {
             }
         ]
     },
+    externals: ['nativescript-xmpp-client', 'node-xmpp-client', 'node-fetch', 'form-data'],
+
     plugins: [
         new CleanWebpackPlugin (),
 
