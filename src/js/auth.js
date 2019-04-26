@@ -25,12 +25,12 @@ ConnectyCube.createSession(CREDENTIALS, function (error, session) {
                     $('.fullName').val('');
                     $('.login').val('');
                     $('.password').val('');
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         $('.container_form-block').addClass('switch_block');
                         $('.registration_active').removeClass('show_panel');
                         $('.login_active').addClass('show_panel');
                         $('.success').fadeOut(1000);
-                    },500);
+                    }, 500);
                 } else if (error) {
                     console.error('!signUp Error');
                     new inputError('.registration_active', user);
@@ -51,14 +51,15 @@ ConnectyCube.createSession(CREDENTIALS, function (error, session) {
 
             ConnectyCube.login(logInUser, function (error, user) {
                 if (user) {
-                    $('.success-welcome').fadeIn();
                     $('.loginIn').val('');
                     $('.passwordPass').val('');
-                    setTimeout(()=>{
-                        $('.success-welcome').fadeOut(3000);
-                    });
+                    $('.full_name').text(`${user.full_name}`);
+                    $('.login_name').text(`${user.login}`);
+                    $('.auth-panel').fadeOut();
+                    $('.user-panel').fadeIn();
+
                 } else if (error) {
-                    console.error('!This user doesn'+ "'" + 't' + ' exist.');
+                    console.error('!This user doesn' + "'" + 't' + ' exist.');
                     if ($('.login_active input').val() === '') {
                         new inputError('.login_active', user);
                     } else {

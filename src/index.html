@@ -10,10 +10,9 @@
     <title>auth</title>
 </head>
 <body>
-<div class="container">
-    <div class="success_container p-4">
-        <h2 class="success text-success">Successful!</h2>
-        <h2 class="success-welcome text-warning">Welcome!</h2>
+<div class="container auth-panel">
+    <div class="success_container">
+        <h2 class="success text-success m-5">Successful!</h2>
     </div>
     <div class="jumbotron p-5 bg-panel">
         <div class="container_info">
@@ -69,8 +68,45 @@
         </div>
     </div>
 </div>
-
-
+<div class="user-panel">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand font-weight-bold" href="#"><h2>MY PROFILE</h2></a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Log Out</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <img src="http://uavi.com.ua/wp-content/uploads/user.png" class="img-thumbnail" alt="user">
+            </div>
+            <div class="col-6">
+                <div class="user_container">
+                    <div class="rounded mb-4">
+                        <h2 class="text-secondary m-2">Full Name: <span class="full_name text-info"></span></h2>
+                    </div>
+                    <div class="rounded">
+                        <h2 class="text-secondary m-2">Login: <span class="login_name text-info"></span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
-const path = require ('path');
-const webpack = require ('webpack');
-const HtmlWebpackPlugin = require ('html-webpack-plugin');
-const MiniCssExtractPlugin = require ("mini-css-extract-plugin");
-const CleanWebpackPlugin = require ('clean-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: [
         './src/js/bundle.js',
@@ -11,7 +11,7 @@ module.exports = {
     ],
     output: {
         filename: 'main.js',
-        path: path.resolve (__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist')
     },
     devtool: "source-map",
     devServer: {
@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 test: /\.(sass|scss)$/,
-                include: path.resolve (__dirname, 'src/sass'),
+                include: path.resolve(__dirname, 'src/sass'),
                 use: [{
                     loader: MiniCssExtractPlugin.loader,
                     options: {}
@@ -55,7 +55,7 @@ module.exports = {
                             ident: 'postcss',
                             sourceMap: true,
                             plugins: () => [
-                                require ('cssnano') ({
+                                require('cssnano')({
                                     preset: ['default', {
                                         discardComments: {
                                             removeAll: true,
@@ -75,28 +75,39 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                include: path.resolve (__dirname, 'src/'),
+                include: path.resolve(__dirname, 'src/'),
                 use: ['raw-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images',
+                        },
+                    },
+                ],
             }
         ]
     },
     externals: ['nativescript-xmpp-client', 'node-xmpp-client', 'node-fetch', 'form-data'],
 
     plugins: [
-        new CleanWebpackPlugin (),
+        new CleanWebpackPlugin(),
 
-        new HtmlWebpackPlugin ({
+        new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             template: './src/index.html',
             filename: 'index.html'
         }),
 
-        new MiniCssExtractPlugin ({
+        new MiniCssExtractPlugin({
             filename: "./css/style.bundle.css",
         }),
 
-        new webpack.ProvidePlugin ({
+        new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
             scrollTabs: 'scroll-tabs',
