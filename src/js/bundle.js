@@ -20,3 +20,8 @@ $ ('.bg-panel input[type="radio"]').on ('change', function () {
         $ ('.registration_active').removeClass ('show_panel');
     }
 });
+
+ $(document).on('click', '.logOut', function () {
+     $('.user-panel').fadeOut();
+     $('.auth-panel').fadeIn();
+ });
