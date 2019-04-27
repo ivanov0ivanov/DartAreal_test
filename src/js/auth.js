@@ -33,7 +33,7 @@ ConnectyCube.createSession(CREDENTIALS, function (error, session) {
                     }, 500);
                 } else if (error) {
                     console.error('!signUp Error');
-                    new inputError('.registration_active', user);
+                    new InputError('.registration_active', user);
                 }
             });
         });
