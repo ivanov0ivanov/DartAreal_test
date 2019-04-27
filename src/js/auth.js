@@ -61,7 +61,7 @@ ConnectyCube.createSession(CREDENTIALS, function (error, session) {
                 } else if (error) {
                     console.error('!This user doesn' + "'" + 't' + ' exist.');
                     if ($('.login_active input').val() === '') {
-                        new inputError('.login_active', user);
+                        new InputError('.login_active', user);
                     } else {
                         $('.error').css('display', 'none');
                         $('.errorUser').css('display', 'block');
@@ -74,7 +74,7 @@ ConnectyCube.createSession(CREDENTIALS, function (error, session) {
     }
 });
 
-class inputError {
+class InputError {
     constructor(auth, user) {
         $(`${auth} input`).each(function () {
             if (user) {
